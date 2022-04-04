@@ -26,7 +26,16 @@ app.get('/api/auth', async (req, res, next) => {
 
 app.get('/api/users/:id/notes', async (req, res, next) => {
   try {
-    res.send(await Note.findAll({ where: { userId: req.params.id } }));
+    console.log(req)
+    // const auth = await axios.get("api/auth",{
+    //   headers:{
+    //     authorization: token
+    //   }
+    // })
+    // if (req.params.id = auth.id){
+    //   res.send(await Note.findAll({ where: { userId: req.params.id } }));
+    // }
+
   } catch (ex) {
     next(ex);
   }

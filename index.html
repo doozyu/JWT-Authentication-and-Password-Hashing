@@ -106,7 +106,7 @@
                 </div>
                 <ul>
                   {notes[0] ? (
-                    notes.map((note) => <li>{note.text}</li>)
+                    notes.map((note) => <li key = {note.id}>{note.text}</li>)
                   ) : (
                     <li>User has no notes</li>
                   )}
