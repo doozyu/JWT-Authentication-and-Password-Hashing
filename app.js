@@ -18,6 +18,7 @@ app.post('/api/auth', async(req, res, next)=> {
 
 app.get('/api/auth', async(req, res, next)=> {
   try {
+    // console.log(User.byToken(req.headers.authorization))
     res.send(await User.byToken(req.headers.authorization));
   }
   catch(ex){
